@@ -45,3 +45,4 @@ Creative Cloud Files
 .gitconfig
 .iterm2
 composer-setup.php
+.ddev_mutagen_data_directory

@@ -204,6 +204,9 @@ function iterm2_print_user_vars() {
   elif [[ $fullpath[3] = 'plesk' ]]
   then
     shortpath=$fullpath[4]
+  elif [[ $fullpath[3] = 'gt' ]]
+  then
+    shortpath=$fullpath[4]
   elif [[ $fullpath[3] = 'aws' ]]
   then
     shortpath=$fullpath[4]
