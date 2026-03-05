@@ -133,6 +133,7 @@ alias vhosts="sudo nvim /opt/local/etc/apache2/extra/httpd-vhosts.conf"
 alias packages="cd /Volumes/DerWirt/packages"
 alias personal="cd /Volumes/DerWirt/personal"
 alias plesk="cd /Volumes/DerWirt/plesk"
+alias gt="cd /Volumes/DerWirt/gt"
 alias sandboxes="cd /Volumes/DerWirt/sandboxes"
 alias tlw="cd /Volumes/DerWirt/aws"
 
