@@ -222,3 +222,8 @@ function iterm2_print_user_vars() {
 
 # iterm command line integration
 test -e /Users/fm56/.iterm2_shell_integration.zsh && source /Users/fm56/.iterm2_shell_integration.zsh || true
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/fm56/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
