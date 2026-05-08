@@ -86,7 +86,6 @@ return require('packer').startup(function(use)
       name = 'Listen for Xdebug',
       port = 9003,
       log = true,
-      localSourceRoot = '/Users/fm56/Documents/Jobs/plesk/'
     }
   }
   require("dapui").setup()
