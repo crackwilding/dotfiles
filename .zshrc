@@ -119,6 +119,7 @@ export PATH=$PATH:/Users/fm56/.composer/vendor/bin
 
 # Aliases
 alias ll="ls -la"
+alias dockfix="defaults write com.apple.dock appswitcher-all-displays -bool true; killall Dock"
 
 alias astart="sudo apachectl start"
 alias astop="sudo apachectl stop"
