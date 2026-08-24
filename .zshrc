@@ -120,6 +120,8 @@ export PATH=$PATH:/Users/fm56/.composer/vendor/bin
 # Aliases
 alias ll="ls -la"
 alias dockfix="defaults write com.apple.dock appswitcher-all-displays -bool true; killall Dock"
+
+alias revile="open /Applications/Docker.app; upsun login"
 alias devon="ddev drush theme:dev on; ddev drush -y config-set system.performance js.preprocess 0; ddev drush -y config-set system.performance css.preprocess 0"
 alias devoff="ddev drush theme:dev off; ddev drush -y config-set system.performance js.preprocess 1; ddev drush -y config-set system.performance css.preprocess 1"
 
