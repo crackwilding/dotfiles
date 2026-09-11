@@ -121,7 +121,7 @@ export PATH=$PATH:/Users/fm56/.composer/vendor/bin
 alias ll="ls -la"
 alias dockfix="defaults write com.apple.dock appswitcher-all-displays -bool true; killall Dock"
 
-alias revile="open /Applications/Docker.app; upsun login"
+alias reveille="open /Applications/Docker.app; upsun login"
 alias devon="ddev drush theme:dev on; ddev drush -y config-set system.performance js.preprocess 0; ddev drush -y config-set system.performance css.preprocess 0"
 alias devoff="ddev drush theme:dev off; ddev drush -y config-set system.performance js.preprocess 1; ddev drush -y config-set system.performance css.preprocess 1"
 
@@ -147,6 +147,24 @@ alias gsquare="find ./* -type d -name \"html\" -maxdepth 1 -execdir bash -c \"cd
 alias drebuild="sudo rm -r vendor; sudo rm -r web/core; sudo rm -r web/modules/contrib; sudo rm -r web/themes/contrib; sudo rm -r web/profiles/contrib; composer install; say 'done'"
 
 # Functions
+
+# Open all stages to status page
+function stages() {
+  find ./ -type d -name stage -maxdepth 2 \
+    -exec bash -c '
+      NAME="$(cut -d / -f 2 <<< \"$1\")"; 
+      open https://stage.$NAME.gatech.edu/admin/reports/status
+    ' bash {} \;
+}
+
+# Open all mains to status page
+function mains() {
+  find ./ -type d -name stage -maxdepth 2 \
+    -exec bash -c '
+      NAME="$(cut -d / -f 2 <<< \"$1\")"; 
+      open https://$NAME.gatech.edu/admin/reports/status
+    ' bash {} \;
+}
 
 # Checkout stage and force clean untracked files.
 function psquare() {
