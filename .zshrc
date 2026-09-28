@@ -148,6 +148,18 @@ alias drebuild="sudo rm -r vendor; sudo rm -r web/core; sudo rm -r web/modules/c
 
 # Functions
 
+# Execute arbitary commands on all local sites.
+function shotgun() {
+  echo "Command: "
+  read OP
+  find ./ -type d -name stage -maxdepth 2 \
+    -exec env OPI=$OP bash -c '
+      echo {} >> progress.txt; cd {}; pwd; eval $OPI;
+    ' bash {} \;
+  echo "\n" >> progress.txt
+  say "shogun done"
+}
+
 # Open all stages to status page
 function stages() {
   find ./ -type d -name stage -maxdepth 2 \
